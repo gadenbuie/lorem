@@ -31,7 +31,7 @@ to specify the number of desired paragraphs and sentences.
 
 ### R Markdown
 
-The easiest way to generate *lorem ipsum* placeholder text is to call
+Another way to generate *lorem ipsum* placeholder text is to call
 `lorem::ipsum()` in an inline R chunk in R Markdown.
 
 ``` markdown
