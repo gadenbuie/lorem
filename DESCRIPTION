@@ -1,0 +1,25 @@
+Package: lorem
+Title: Generate Lorem Ipsum Text
+Version: 0.1.0
+Authors@R: 
+    person(given = "Garrick",
+           family = "Aden-Buie",
+           role = c("aut", "cre"),
+           email = "garrick@adenbuie.com",
+           comment = c(ORCID = "0000-0002-7111-0077"))
+Description: Quickly generate lorem ipsum placeholder text. Easy
+    to integrate in RMarkdown documents. Includes an RStudio addin to
+    insert lorem ipsum into the current document.
+License: MIT + file LICENSE
+URL: https://github.com/gadenbuie/lorem
+BugReports: https://github.com/gadenbuie/lorem/issues
+Depends:
+    R (>= 2.10)
+Imports: 
+    stats
+Suggests: 
+    rstudioapi
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1

@@ -1,0 +1,92 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+set.seed(424344)
+```
+
+# lorem::ipsum()
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+* Quickly generate lorem ipsum placeholder text with `lorem::ipsum()`.
+
+* Easy to integrate in RMarkdown documents. 
+
+* Includes an RStudio addin to insert *lorem ipsum* into the current document.
+
+## Installation
+
+``` r
+# install.package("devtools")
+devtools::install_github("gadenbuie/lorem")
+```
+
+## Usage
+
+### RStudio Addin
+
+**lorem** includes a simple addin for RStudio that 
+adds placeholder _lorem ipsum_ text to the current source document.
+The addin allows you to specify the number of desired paragraphs and sentences.
+
+### R Markdown
+
+The easiest way to generate _lorem ipsum_ placeholder text is to call 
+`lorem::ipsum()` in an inline R chunk in R Markdown.
+
+```markdown
+`r knitr::inline_expr("lorem::ipsum(paragraphs = 2)")`
+```
+
+`r paste(">", lorem::ipsum(2), collapse = "\n>\n")`
+
+You can control the number of `paragraphs` and `sentences` per paragraph.
+
+```markdown
+`r knitr::inline_expr("lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))")`
+```
+
+`r paste(">", lorem::ipsum(3, 1:3), collapse = "\n>\n")`
+
+You can also adjust the `avg_words_per_sentence` to create long or short paragraphs.
+
+```markdown
+`r knitr::inline_expr("lorem::ipsum(2, avg_words_per_sentence = 3)")`
+```
+
+`r paste(">", lorem::ipsum(paragraphs = 2, avg_words_per_sentence = 3), collapse = "\n>\n")`
+
+
+```markdown
+`r knitr::inline_expr("lorem::ipsum(1, avg_words_per_sentence = 20)")`
+```
+
+`r paste(">", lorem::ipsum(1, 2, avg_words_per_sentence = 20), collapse = "\n>\n")`
+
+### Everywhere Else
+
+Generate _lorem ipsum_ anywhere else using `lorem::ipsum()` or `lorem::ipsum_words()`.
+
+```{r results='asis'}
+ipsum_items <- replicate(5, lorem::ipsum_words(5))
+cat(paste("-", ipsum_items), sep = "\n")
+```
+
+## Ipsum gratiam
+
+Thank you to 
+[Luke Haas](https://getlorem.com) 
+for the node module 
+[getlorem](https://github.com/lukehaas/getlorem) 
+and for providing the lorem ipsum word list used in this package.
