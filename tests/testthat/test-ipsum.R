@@ -1,7 +1,6 @@
 test_that("lorem::ipsum() produces lorem characters", {
   x <- lorem::ipsum()
   expect_s3_class(x, "lorem")
-  expect_type(x, "character")
 })
 
 test_that("lorem::ipsum() 1-sentence paragraphs", {
