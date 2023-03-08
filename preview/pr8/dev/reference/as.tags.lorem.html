@@ -85,10 +85,18 @@ just drop <code><a href="ipsum.html">ipsum()</a></code> text into another <code>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>wrapper</dt>
+    <dl><dt>x</dt>
+<dd><p>Object to be converted.</p></dd>
+
+
+<dt>wrapper</dt>
 <dd><p>A function that takes a character string of a paragraph or
 chunk of placeholder text and returns an <code><a href="https://rstudio.github.io/htmltools/reference/builder.html" class="external-link">htmltools::tag()</a></code>. By default,
 lorem ipsum text is wrapped in <code><a href="https://rstudio.github.io/htmltools/reference/builder.html" class="external-link">htmltools::p()</a></code>.</p></dd>
+
+
+<dt>...</dt>
+<dd><p>Any additional parameters.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -104,9 +112,9 @@ lorem ipsum text is wrapped in <code><a href="https://rstudio.github.io/htmltool
 <span class="r-in"><span>  <span class="fu">lorem</span><span class="fu">::</span><span class="fu"><a href="ipsum.html">ipsum</a></span><span class="op">(</span>paragraphs <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;div&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Sit molestie a euismod in proin nec proin. Nam pretium et habitant – platea est mauris quam. Netus vehicula justo ullamcorper proin sodales dui auctor dapibus. Nulla venenatis laoreet nisl quisque velit vel nam erat ligula. Lacus potenti pretium conubia, mattis ornare, pharetra integer risus nullam venenatis dignissim, per molestie sodales. Tellus senectus vehicula leo dui, in fermentum dis fusce?&lt;/p&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Amet primis ullamcorper aenean mattis gravida, nascetur ultricies dis quam. Nullam et libero donec, cras penatibus diam potenti ornare porta! Platea consequat et ultricies curae; netus nam curabitur orci sociosqu. Egestas id a quis vel penatibus mattis, sollicitudin potenti! Nibh euismod lobortis dignissim aptent taciti. Porta primis molestie malesuada commodo massa posuere: aliquam cras ac himenaeos primis urna auctor hac maecenas hac congue.&lt;/p&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Dolor ornare ullamcorper, cursus sagittis per pharetra himenaeos arcu massa. Senectus congue sapien hac ut gravida conubia fermentum aliquet nam sem suscipit. Proin pretium cubilia magnis, dictumst accumsan, dui, cursus a eu per sociis ante. Nullam tristique cubilia hac tincidunt neque imperdiet justo? Enim scelerisque fermentum gravida conubia arcu per aliquam nunc ridiculus fusce: mi convallis: a congue – facilisi, velit posuere congue leo odio eros massa!&lt;/p&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Adipiscing leo scelerisque massa interdum volutpat curae donec enim. Tellus odio habitant sem; tempor lobortis natoque justo.&lt;/p&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Amet vestibulum, condimentum purus dui turpis venenatis lacinia nisl aliquet. Cras mattis posuere mollis conubia turpis arcu venenatis mollis parturient litora! Faucibus sapien sollicitudin mattis netus nisi arcu at neque, platea sagittis! Felis torquent, porttitor ridiculus vitae aliquam eleifend tristique. Nunc velit dignissim volutpat, gravida metus risus nascetur erat. Consequat nascetur aptent eleifend ultrices at.&lt;/p&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Ipsum morbi duis sociosqu sapien vivamus dui id vestibulum torquent? Ultricies blandit velit, ultricies – sollicitudin – velit potenti nec. Pretium sollicitudin hac fermentum sagittis lacus feugiat, scelerisque accumsan lacinia mattis sollicitudin pharetra! Porttitor netus iaculis etiam leo nec conubia hendrerit metus diam. Sagittis quis luctus ornare in duis nec eros magnis sociosqu ante elementum, dui eu ullamcorper mattis.&lt;/p&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/div&gt;</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">htmltools</span><span class="fu">::</span><span class="va"><a href="https://rstudio.github.io/htmltools/reference/builder.html" class="external-link">tags</a></span><span class="op">$</span><span class="fu">ul</span><span class="op">(</span></span></span>
