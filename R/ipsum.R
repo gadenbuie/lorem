@@ -75,13 +75,6 @@ ipsum <- function(paragraphs = 1, sentences = NULL, avg_words_per_sentence = 10)
   ret
 }
 
-#' @importFrom knitr knit_print
-#' @export
-knit_print.lorem <- function(x, ...) {
-  x <- paste(x, collapse = "\n\n")
-  knitr::asis_output(x)
-}
-
 #' @describeIn ipsum Generate _lorem ipsum_ words, without punctuation.
 #' @param n Number of words to generate
 #' @param collapse Should the words be collapsed into a single string, separated
