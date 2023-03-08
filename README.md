@@ -4,14 +4,15 @@
 # lorem::ipsum()
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-- Quickly generate lorem ipsum placeholder text with `lorem::ipsum()`.
+  - Quickly generate lorem ipsum placeholder text with `lorem::ipsum()`.
 
-- Easy to integrate in RMarkdown documents.
+  - Easy to integrate in RMarkdown documents.
 
-- Includes an RStudio addin to insert *lorem ipsum* into the current
-  document.
+  - Includes an RStudio addin to insert *lorem ipsum* into the current
+    document.
 
 ## Installation
 
@@ -41,13 +42,13 @@ Another way to generate *lorem ipsum* placeholder text is to call
 > malesuada cursus fames magnis potenti. Venenatis ligula enim conubia
 > laoreet orci, class ligula. Massa sem sed enim risus ut mattis
 > inceptos nisl elementum mattis. Nostra ultricies habitant donec vitae
-> luctus proin gravida placerat ac libero imperdiet! Auctor habitasse
+> luctus proin gravida placerat ac libero imperdiet\! Auctor habitasse
 > faucibus ultricies purus eget sociis ultrices habitasse: nec ad aptent
 > lectus rutrum proin potenti, montes, sodales, posuere convallis tempor
 > erat, egestas magna lectus sociis mollis purus.
->
+> 
 > Dolor turpis euismod himenaeos interdum felis dictum tempus euismod
-> tortor aliquam! Eget interdum vehicula laoreet quam mollis, justo
+> tortor aliquam\! Eget interdum vehicula laoreet quam mollis, justo
 > cursus ad blandit feugiat pulvinar? Sem sodales bibendum leo leo magna
 > pulvinar metus lacinia nam. Fringilla maecenas duis dis suscipit
 > aenean natoque sem metus, quam risus sagittis convallis primis sociis
@@ -62,14 +63,14 @@ paragraph.
 
 > Amet cras primis at ac neque primis dui scelerisque massa inceptos
 > massa.
->
+> 
 > Adipiscing netus cursus – vivamus est aliquam mauris pharetra: nostra
 > ornare. Tristique ad consequat sagittis montes sociis, ut cursus
-> tincidunt vitae sagittis netus!
->
+> tincidunt vitae sagittis netus\!
+> 
 > Adipiscing aptent libero vitae etiam tristique commodo iaculis erat
 > mattis tempor convallis. Porta aenean natoque, feugiat himenaeos – ac
-> accumsan mollis torquent in ut maecenas congue vulputate nulla!
+> accumsan mollis torquent in ut maecenas congue vulputate nulla\!
 > Interdum fames.
 
 You can also adjust the `avg_words_per_sentence` to create long or short
@@ -81,7 +82,7 @@ paragraphs.
 
 > Elit facilisis curae pharetra quisque per? Euismod risus phasellus
 > euismod velit, orci platea? Na platea.
->
+> 
 > Amet posuere habitasse imperdiet. Porta tempor felis morbi. Est nam
 > nisl litora viverra? Accumsan feugiat volutpat cubilia purus. Na
 > purus.
@@ -95,7 +96,7 @@ paragraphs.
 > libero elementum euismod nibh ligula conubia vitae, ad egestas dis
 > himenaeos ligula urna, dui parturient lacus montes semper ultricies
 > euismod non condimentum porta sem luctus porttitor platea hac
-> sagittis!
+> sagittis\!
 
 ### Everywhere Else
 
@@ -107,11 +108,11 @@ ipsum_items <- replicate(5, lorem::ipsum_words(5))
 cat(paste("-", ipsum_items), sep = "\n")
 ```
 
-- purus enim pellentesque blandit facilisis
-- elementum interdum suscipit enim urna
-- urna elementum nec vitae scelerisque
-- scelerisque faucibus dignissim urna interdum
-- curabitur porttitor dui in euismod
+  - purus enim pellentesque blandit facilisis
+  - elementum interdum suscipit enim urna
+  - urna elementum nec vitae scelerisque
+  - scelerisque faucibus dignissim urna interdum
+  - curabitur porttitor dui in euismod
 
 ## Ipsum gratiam
 
