@@ -33,7 +33,10 @@ knit_print.lorem <- function(x, ...) {
 #' )
 #'
 #' htmltools::tags$ul(
-#'   as.tags(lorem::ipsum(1, 1), htmltools::tags$li)
+#'   htmltools::as.tags(
+#'     lorem::ipsum(paragraphs = 3, sentences = 1),
+#'     wrapper = htmltools::tags$li
+#'   )
 #' )
 #'
 #' @inheritParams htmltools::as.tags
