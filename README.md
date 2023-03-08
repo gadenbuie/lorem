@@ -4,15 +4,14 @@
 # lorem::ipsum()
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
-  - Quickly generate lorem ipsum placeholder text with `lorem::ipsum()`.
+- Quickly generate lorem ipsum placeholder text with `lorem::ipsum()`.
 
-  - Easy to integrate in RMarkdown documents.
+- Easy to integrate in RMarkdown documents.
 
-  - Includes an RStudio addin to insert *lorem ipsum* into the current
-    document.
+- Includes an RStudio addin to insert *lorem ipsum* into the current
+  document.
 
 ## Installation
 
@@ -38,21 +37,21 @@ Another way to generate *lorem ipsum* placeholder text is to call
 `r lorem::ipsum(paragraphs = 2)`
 ```
 
-> Sit nunc at convallis fringilla semper\! Penatibus vivamus eget
+> Sit nunc at convallis fringilla semper. Penatibus vivamus eget
 > malesuada cursus fames magnis potenti. Venenatis ligula enim conubia
-> laoreet orci class ligula? Massa sem sed enim risus ut mattis inceptos
-> nisl elementum mattis. Nostra ultricies habitant donec vitae luctus
-> proin gravida placerat ac libero imperdiet. Auctor habitasse faucibus
-> ultricies purus eget sociis ultrices habitasse nec ad aptent lectus
-> rutrum proin potenti montes sodales posuere convallis tempor erat
-> egestas magna lectus sociis mollis purus.
-> 
+> laoreet orci, class ligula. Massa sem sed enim risus ut mattis
+> inceptos nisl elementum mattis. Nostra ultricies habitant donec vitae
+> luctus proin gravida placerat ac libero imperdiet! Auctor habitasse
+> faucibus ultricies purus eget sociis ultrices habitasse: nec ad aptent
+> lectus rutrum proin potenti, montes, sodales, posuere convallis tempor
+> erat, egestas magna lectus sociis mollis purus.
+>
 > Dolor turpis euismod himenaeos interdum felis dictum tempus euismod
-> tortor aliquam? Eget interdum vehicula laoreet quam. Mollis justo
-> cursus ad blandit feugiat pulvinar sem sodales bibendum. Leo leo magna
-> pulvinar metus lacinia nam fringilla maecenas duis dis suscipit aenean
-> natoque sem metus quam risus sagittis convallis primis sociis id
-> dictumst.
+> tortor aliquam! Eget interdum vehicula laoreet quam mollis, justo
+> cursus ad blandit feugiat pulvinar? Sem sodales bibendum leo leo magna
+> pulvinar metus lacinia nam. Fringilla maecenas duis dis suscipit
+> aenean natoque sem metus, quam risus sagittis convallis primis sociis
+> id dictumst.
 
 You can control the number of `paragraphs` and `sentences` per
 paragraph.
@@ -61,16 +60,17 @@ paragraph.
 `r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))`
 ```
 
-> Sit elementum felis etiam dictum vel lacus lobortis justo aptent proin
-> pellentesque.
-> 
-> Sit orci luctus fringilla torquent pharetra taciti lectus viverra
-> suscipit pellentesque. Sociosqu pharetra montes aptent parturient
-> dapibus duis?
-> 
-> Consectetur egestas netus ultrices dictumst pharetra eleifend a. Sem
-> platea rhoncus erat ac consequat. Curabitur vivamus sed porttitor
-> dictumst interdum praesent quam nostra vivamus.
+> Amet cras primis at ac neque primis dui scelerisque massa inceptos
+> massa.
+>
+> Adipiscing netus cursus – vivamus est aliquam mauris pharetra: nostra
+> ornare. Tristique ad consequat sagittis montes sociis, ut cursus
+> tincidunt vitae sagittis netus!
+>
+> Adipiscing aptent libero vitae etiam tristique commodo iaculis erat
+> mattis tempor convallis. Porta aenean natoque, feugiat himenaeos – ac
+> accumsan mollis torquent in ut maecenas congue vulputate nulla!
+> Interdum fames.
 
 You can also adjust the `avg_words_per_sentence` to create long or short
 paragraphs.
@@ -79,21 +79,23 @@ paragraphs.
 `r lorem::ipsum(2, avg_words_per_sentence = 3)`
 ```
 
-> Lorem semper diam. Natoque cras primis. At ac neque primis? Dui
-> scelerisque massa inceptos? Na inceptos?
-> 
-> Adipiscing massa netus cursus vivamus est aliquam mauris pharetra
-> nostra.
+> Elit facilisis curae pharetra quisque per? Euismod risus phasellus
+> euismod velit, orci platea? Na platea.
+>
+> Amet posuere habitasse imperdiet. Porta tempor felis morbi. Est nam
+> nisl litora viverra? Accumsan feugiat volutpat cubilia purus. Na
+> purus.
 
 ``` markdown
 `r lorem::ipsum(1, avg_words_per_sentence = 20)`
 ```
 
-> Consectetur libero vitae etiam tristique commodo iaculis erat mattis
-> tempor convallis porta? Aenean natoque feugiat himenaeos ac accumsan
-> mollis torquent in ut maecenas congue vulputate nulla interdum fames
-> conubia nibh interdum interdum habitasse pellentesque est nec conubia
-> penatibus leo ornare duis cubilia elementum.
+> Elit venenatis tincidunt urna sagittis integer posuere dignissim. Dui
+> tellus massa nam suspendisse venenatis dui nec imperdiet donec magna
+> libero elementum euismod nibh ligula conubia vitae, ad egestas dis
+> himenaeos ligula urna, dui parturient lacus montes semper ultricies
+> euismod non condimentum porta sem luctus porttitor platea hac
+> sagittis!
 
 ### Everywhere Else
 
@@ -105,11 +107,11 @@ ipsum_items <- replicate(5, lorem::ipsum_words(5))
 cat(paste("-", ipsum_items), sep = "\n")
 ```
 
-  - magnis maecenas felis per egestas
-  - erat gravida gravida lacus interdum
-  - ad vulputate ante tristique parturient
-  - augue ultricies nisi vehicula et
-  - urna venenatis facilisi felis mattis
+- purus enim pellentesque blandit facilisis
+- elementum interdum suscipit enim urna
+- urna elementum nec vitae scelerisque
+- scelerisque faucibus dignissim urna interdum
+- curabitur porttitor dui in euismod
 
 ## Ipsum gratiam
 

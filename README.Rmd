@@ -21,7 +21,7 @@ set.seed(424342)
 
 * Quickly generate lorem ipsum placeholder text with `lorem::ipsum()`.
 
-* Easy to integrate in RMarkdown documents. 
+* Easy to integrate in RMarkdown documents.
 
 * Includes an RStudio addin to insert *lorem ipsum* into the current document.
 
@@ -36,13 +36,13 @@ devtools::install_github("gadenbuie/lorem")
 
 ### RStudio Addin
 
-**lorem** includes a simple addin for RStudio that 
+**lorem** includes a simple addin for RStudio that
 adds placeholder _lorem ipsum_ text to the current source document.
 The addin allows you to specify the number of desired paragraphs and sentences.
 
 ### R Markdown
 
-Another way to generate _lorem ipsum_ placeholder text is to call 
+Another way to generate _lorem ipsum_ placeholder text is to call
 `lorem::ipsum()` in an inline R chunk in R Markdown.
 
 ```markdown
@@ -85,8 +85,8 @@ cat(paste("-", ipsum_items), sep = "\n")
 
 ## Ipsum gratiam
 
-Thank you to 
-[Luke Haas](https://getlorem.com) 
-for the node module 
-[getlorem](https://github.com/lukehaas/getlorem) 
+Thank you to
+[Luke Haas](https://getlorem.com)
+for the node module
+[getlorem](https://github.com/lukehaas/getlorem)
 and for providing the lorem ipsum word list used in this package.
