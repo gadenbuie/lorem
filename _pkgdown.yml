@@ -1,0 +1,9 @@
+url: http://pkg.garrickadenbuie.com/lorem/
+
+template:
+  package: grkgdown
+
+reference:
+- title: Generate Placeholder Text
+  contents: '`ipsum`'
+

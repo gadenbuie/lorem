@@ -8,7 +8,8 @@ Description: Quickly generate lorem ipsum placeholder text. Easy to
     integrate in RMarkdown documents. Includes an RStudio addin to insert
     lorem ipsum into the current document.
 License: MIT + file LICENSE
-URL: https://github.com/gadenbuie/lorem
+URL: https://github.com/gadenbuie/lorem,
+    http://pkg.garrickadenbuie.com/lorem/
 BugReports: https://github.com/gadenbuie/lorem/issues
 Depends:
     R (>= 2.10)
@@ -19,7 +20,8 @@ Suggests:
     rstudioapi,
     testthat (>= 3.0.0),
     withr
+Config/Needs/website: gadenbuie/grkgdown
+Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-Config/testthat/edition: 3
