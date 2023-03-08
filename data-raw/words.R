@@ -1,4 +1,3 @@
-
 # https://github.com/lukehaas/getlorem/blob/e845157641ddb7e4696dd2666c92a8165e407f1b/lib/getlorem.js#L37-L81
 words <- list(
   start = c(

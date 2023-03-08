@@ -75,6 +75,7 @@ ipsum <- function(paragraphs = 1, sentences = NULL, avg_words_per_sentence = 10)
   ret
 }
 
+#' @importFrom knitr knit_print
 #' @export
 knit_print.lorem <- function(x, ...) {
   x <- paste(x, collapse = "\n\n")
