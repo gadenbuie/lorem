@@ -36,16 +36,18 @@ knit_print.lorem <- function(x, ...) {
 #'   as.tags(lorem::ipsum(1, 1), htmltools::tags$li)
 #' )
 #'
-#' @importFrom htmltools as.tags
+#' @inheritParams htmltools::as.tags
 #' @param wrapper A function that takes a character string of a paragraph or
 #'   chunk of placeholder text and returns an [htmltools::tag()]. By default,
 #'   lorem ipsum text is wrapped in [htmltools::p()].
 #'
 #' @return Returns an [htmltools::tagList()].
+#'
+#' @importFrom htmltools as.tags
 #' @export
 as.tags.lorem <- function(x, wrapper = NULL, ...) {
   if (is.null(wrapper)) {
-    wrapper <- function(x) htmltools::p(x, .noWS = "inside")
+    wrapper <- function(x, ...) htmltools::p(x, .noWS = "inside")
   }
-  htmltools::tagList(lapply(x, wrapper))
+  htmltools::tagList(lapply(x, wrapper, ...))
 }

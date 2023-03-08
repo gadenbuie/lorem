@@ -7,9 +7,13 @@
 \method{as.tags}{lorem}(x, wrapper = NULL, ...)
 }
 \arguments{
+\item{x}{Object to be converted.}
+
 \item{wrapper}{A function that takes a character string of a paragraph or
 chunk of placeholder text and returns an \code{\link[htmltools:builder]{htmltools::tag()}}. By default,
 lorem ipsum text is wrapped in \code{\link[htmltools:builder]{htmltools::p()}}.}
+
+\item{...}{Any additional parameters.}
 }
 \value{
 Returns an \code{\link[htmltools:tagList]{htmltools::tagList()}}.
