@@ -112,15 +112,22 @@ lorem ipsum text is wrapped in <code><a href="https://rstudio.github.io/htmltool
 <span class="r-in"><span>  <span class="fu">lorem</span><span class="fu">::</span><span class="fu"><a href="ipsum.html">ipsum</a></span><span class="op">(</span>paragraphs <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;div&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Lorem magnis laoreet malesuada eleifend mattis inceptos magna est? Lacus justo litora parturient rhoncus odio, est interdum elementum mi montes. Laoreet mauris nulla, lacinia egestas id vehicula malesuada elementum fermentum, semper parturient. Placerat vulputate justo per montes?&lt;/p&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Adipiscing nec ut tortor et lectus primis donec venenatis orci. Venenatis sodales tempor sociosqu scelerisque luctus pellentesque cursus ut viverra. Mi ultrices ad vitae est integer sollicitudin per; commodo facilisis auctor. Na auctor.&lt;/p&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Elit eget tristique vitae sapien; senectus mattis. Felis ultrices montes sociosqu pellentesque, habitasse vel, quam enim felis bibendum mi! Iaculis odio curae; neque dictum velit netus nec per risus at felis tristique. Tincidunt tortor diam conubia vehicula cras volutpat laoreet congue imperdiet dignissim nisl ante – aptent nec!&lt;/p&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Amet fusce egestas purus est? Non sed gravida magna felis turpis fermentum mus nullam penatibus dictum. Interdum potenti himenaeos, feugiat felis aenean libero enim volutpat molestie.&lt;/p&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Sit per mauris mattis lacinia! Augue mauris euismod duis ad nostra faucibus – morbi odio nostra quisque duis pretium.&lt;/p&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;p&gt;Consectetur mus sociis quis proin euismod, risus sagittis bibendum nascetur tempor tincidunt? Nullam tempor montes etiam nulla eu? Pellentesque placerat inceptos neque fusce imperdiet justo, dis lobortis volutpat sem libero. Nisl mattis, lobortis cursus metus conubia sollicitudin sodales maecenas luctus?&lt;/p&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/div&gt;</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">htmltools</span><span class="fu">::</span><span class="va"><a href="https://rstudio.github.io/htmltools/reference/builder.html" class="external-link">tags</a></span><span class="op">$</span><span class="fu">ul</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  <span class="fu">as.tags</span><span class="op">(</span><span class="fu">lorem</span><span class="fu">::</span><span class="fu"><a href="ipsum.html">ipsum</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fu">htmltools</span><span class="fu">::</span><span class="va"><a href="https://rstudio.github.io/htmltools/reference/builder.html" class="external-link">tags</a></span><span class="op">$</span><span class="va">li</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu">htmltools</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/htmltools/reference/as.tags.html" class="external-link">as.tags</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    <span class="fu">lorem</span><span class="fu">::</span><span class="fu"><a href="ipsum.html">ipsum</a></span><span class="op">(</span>paragraphs <span class="op">=</span> <span class="fl">3</span>, sentences <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    wrapper <span class="op">=</span> <span class="fu">htmltools</span><span class="fu">::</span><span class="va"><a href="https://rstudio.github.io/htmltools/reference/builder.html" class="external-link">tags</a></span><span class="op">$</span><span class="va">li</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in as.tags(lorem::ipsum(1, 1), htmltools::tags$li):</span> could not find function "as.tags"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;ul&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;li&gt;Amet egestas vestibulum pretium eleifend vulputate tellus hendrerit montes?&lt;/li&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;li&gt;Adipiscing maecenas parturient risus tincidunt ultricies pulvinar aptent sapien per?&lt;/li&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   &lt;li&gt;Sit sodales tellus magnis faucibus quam mus tellus fermentum.&lt;/li&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;/ul&gt;</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
