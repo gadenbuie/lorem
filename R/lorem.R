@@ -8,6 +8,15 @@
 #' effort to shield the placeholder text generation from the main script, so
 #' please only use this package for temporary placeholder text.
 #'
+#' @section Options:
+#'
+#'   You can influence, to a degree, the amount of punctuation that is included
+#'   in the output using the `lorem.punctuation_valence` option. This global
+#'   option should be a number between 0 and 1, or `FALSE` to disable
+#'   punctuation altogether. When the value is closer to 1, more punctuation is
+#'   included in the sentences. When the value is closer to 0, less punctuation
+#'   will be inserted. The default value is 0.4.
+#'
 #' @examples
 #' # 1 paragraph of text
 #' lorem::ipsum(1)
@@ -49,6 +58,9 @@ ipsum <- function(paragraphs = 1, sentences = NULL, avg_words_per_sentence = 10)
   }
 
   stopifnot(paragraphs == length(sentences))
+
+  # check punctuation valence so we can warn about bad values
+  get_punctuation_valence(warn = TRUE)
 
   # roughly 10 words per sentence per paragraph
   words <- stats::rbinom(paragraphs, avg_words_per_sentence * sentences * 2, 0.5)
@@ -121,10 +133,82 @@ break_sentence <- function(text, n) {
 }
 
 as_sentence <- function(x) {
+  x <- insert_punctuation(x)
   x <- paste(x, collapse = " ")
   x <- to_sentence_case(x)
   ending <- sample(c(".", "!", "?"), 1, prob = c(0.7, 0.15, 0.15))
   paste0(x, ending)
+}
+
+insert_punctuation <- function(x) {
+  valence <- get_punctuation_valence()
+  if (identical(valence, FALSE)) return(x)
+
+  idxs <- seq_along(x)
+
+  # draw at most n_words/3 samples from normal distribution
+  r_normal <- stats::rnorm(ceiling(length(x) / 3), mean(idxs), sd = sqrt(length(x)))
+
+  # discard first and last word
+  r_normal <- r_normal[r_normal > 2 & r_normal < (length(x) - 2)]
+
+  # keep only the indexes that are within 0.2 of a sample
+  within_thresh <- vapply(r_normal, FUN.VALUE = logical(1), function(r) {
+    any(abs(r - idxs) < valence / 2)
+  })
+  idxs <- as.integer(round(r_normal[within_thresh], 0))
+
+  if (!length(idxs)) return(x)
+
+  r_punct <- random_punctuation(length(idxs))
+
+  if (all(c(":", ";") %in% r_punct)) {
+    # don't allow both : and ; in the same sentence
+    discard <- sample(c(":", ";"), 1)
+    r_punct[r_punct == discard] <- ""
+  }
+
+  # at most one colon per sentence
+  for (colon in c(":", ";")) {
+    if (length(r_punct[r_punct == colon]) > 2) {
+      idx_colon <- which(r_punct == colon)
+      discard_colon <- sample(idx_colon, size = length(idx_colon) - 1)
+      r_punct[discard_colon] <- ""
+    }
+  }
+
+  x[idxs] <- paste0(x[idxs], r_punct)
+  x
+}
+
+random_punctuation <- function(n) {
+  sample(
+    x    = c(",", ":", ";", " \u2013"),
+    prob = c(0.7, 0.1, 0.1, 0.1),
+    size = n,
+    replace = TRUE
+  )
+}
+
+get_punctuation_valence <- function(warn = FALSE) {
+  valence <- getOption("lorem.punctuation_valence", 0.4)
+  if (identical(valence, FALSE)) return(FALSE)
+  if (identical(valence, TRUE)) return(0.4)
+
+  if (!is.numeric(valence) || valence > 1 || valence < 0) {
+    if (isTRUE(warn)) {
+      warning(
+        "The `lorem.punctuation_valence` option should be a numeric value ",
+        "between 0 and 1, not ",
+        valence,
+        ". Using the default value of 0.2.",
+        call. = FALSE,
+        immediate. = TRUE
+      )
+    }
+    valence <- 0.4
+  }
+  valence
 }
 
 default_n_sentences <- function(text) {

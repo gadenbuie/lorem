@@ -43,12 +43,23 @@ please only use this package for temporary placeholder text.
 }
 \section{Functions}{
 \itemize{
-\item \code{ipsum}: Generate paragraphs and sentences of \emph{lorem ipsum} text.
+\item \code{ipsum()}: Generate paragraphs and sentences of \emph{lorem ipsum} text.
 
-\item \code{ipsum_words}: Generate \emph{lorem ipsum} words, without punctuation.
+\item \code{ipsum_words()}: Generate \emph{lorem ipsum} words, without punctuation.
 
-\item \code{ipsum_starts}: Generate \emph{lorem ipsum} starting words.
+\item \code{ipsum_starts()}: Generate \emph{lorem ipsum} starting words.
+
 }}
+\section{Options}{
+
+
+You can influence, to a degree, the amount of punctuation that is included
+in the output using the \code{lorem.punctuation_valence} option. This global
+option should be a number between 0 and 1, or \code{FALSE} to disable
+punctuation altogether. When the value is closer to 1, more punctuation is
+included in the sentences. When the value is closer to 0, less punctuation
+will be inserted. The default value is 0.4.
+}
 
 \examples{
 # 1 paragraph of text
