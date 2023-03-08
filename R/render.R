@@ -16,10 +16,36 @@ knit_print.lorem <- function(x, ...) {
   knitr::asis_output(format(x))
 }
 
+#' Render placeholder text as HTML tags
+#'
+#' Renders [lorem::ipsum()] placeholder text as HTML tags using
+#' [htmltools::as.tags()]. By default, paragraphs are rendering `<p>` tags with
+#' [htmltools::p()], but you may provide your own paragraph `wrapper` function.
+#' In general, you won't need to manually call this function, instead you can
+#' just drop [lorem::ipsum()] text into another [htmltools::tag()].
+#'
+#' @name as.tags.lorem
+#' @rdname as.tags.lorem
+#'
+#' @examples
+#' htmltools::div(
+#'   lorem::ipsum(paragraphs = 3)
+#' )
+#'
+#' htmltools::tags$ul(
+#'   as.tags(lorem::ipsum(1, 1), htmltools::tags$li)
+#' )
+#'
 #' @importFrom htmltools as.tags
+#' @param wrapper A function that takes a character string of a paragraph or
+#'   chunk of placeholder text and returns an [htmltools::tag()]. By default,
+#'   lorem ipsum text is wrapped in [htmltools::p()].
+#'
+#' @return Returns an [htmltools::tagList()].
 #' @export
-as.tags.lorem <- function(x, ...) {
-  htmltools::tagList(
-    lapply(x, htmltools::p, .noWS = "inside")
-  )
+as.tags.lorem <- function(x, wrapper = NULL, ...) {
+  if (is.null(wrapper)) {
+    wrapper <- function(x) htmltools::p(x, .noWS = "inside")
+  }
+  htmltools::tagList(lapply(x, wrapper))
 }
