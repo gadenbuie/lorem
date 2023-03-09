@@ -89,11 +89,11 @@ jobs:
           pkg <- pkgdown::as_pkgdown(".")
 
           # Deploy pkgdown site to branch
-          pkgdown::deploy_to_branch(pkg, subdir = if (nzchar(subdir)) subdir, clean = nzchar(subdir))
+          pkgdown::deploy_to_branch(subdir = if (nzchar(subdir)) subdir, clean = nzchar(subdir))
 
           # Report deployed site URL
           deployed_url <- file.path(pkg$meta$url, subdir)
-          cat(sprintf('url="%s"', deployed_url), Sys.getenv("GITHUB_OUTPUT"), append = TRUE)
+          cat(sprintf('url="%s"', deployed_url), file = Sys.getenv("GITHUB_OUTPUT"), append = TRUE)
 
       - name: Notify pkgdown deployment
         if: github.event_name == 'pull_request'
