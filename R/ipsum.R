@@ -47,17 +47,35 @@ NULL
 ipsum <- function(paragraphs = 1, sentences = NULL, avg_words_per_sentence = 10) {
   # default to single paragraph
   paragraphs <- paragraphs %||% 1L
-  stopifnot(length(paragraphs) == 1)
+  stopifnot(
+    "`paragraphs` must be a single integer" = length(paragraphs) == 1,
+    "`paragraphs` must be an integer" = paragraphs %% 1 == 0,
+    "`paragraphs` must be greater than 0" = paragraphs > 0,
+    "`paragraphs` must be finite" = is.finite(paragraphs)
+  )
 
   # Pick number of sentences to be about 3-8
-  sentences <- sentences %||% stats::rbinom(paragraphs, 10, 0.45)
-  sentences[sentences < 1] <- 1L
+  if (!is.null(sentences)) {
+    stopifnot(
+      "`sentences` must be a vector of finite values" = all(is.finite(sentences)),
+      "`sentences` must be a vector of integer values" = all(sentences %% 1 == 0),
+      "`sentences` must be a vector of 1 or more integers greater than zero" = all(sentences > 0)
+    )
+  } else {
+    sentences <- stats::rbinom(paragraphs, 10, 0.45)
+    sentences[sentences < 1] <- 1L
+  }
 
   if (length(sentences) == 1 && paragraphs > 1) {
     sentences <- rep(sentences, paragraphs)
   }
 
-  stopifnot(paragraphs == length(sentences))
+  if (paragraphs != length(sentences)) {
+    stop(
+      "`sentences` must be a single integer ",
+      "or have the same length as the number of `paragraphs`."
+    )
+  }
 
   # check punctuation valence so we can warn about bad values
   get_punctuation_valence(warn = TRUE)

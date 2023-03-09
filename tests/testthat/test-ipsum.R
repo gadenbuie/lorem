@@ -37,3 +37,21 @@ test_that("lorem::ipsum() n-sentence paragraphs", {
   expect_n_sentences(lorem::ipsum(1, 3), 3L)
   expect_n_sentences(lorem::ipsum(1, 10), 10L)
 })
+
+test_that("lorem::ispum() catches bad `paragraph` input", {
+  expect_error(ipsum(-1))
+  expect_error(ipsum(1:2))
+  expect_error(ipsum(1.5))
+  expect_error(ipsum(Inf))
+  expect_error(ipsum(NA))
+})
+
+test_that("lorem::ispum() catches bad `sentences` input", {
+  expect_error(ipsum(1, -1))
+  expect_error(ipsum(1, 1:2))
+  expect_error(ipsum(1, 1.5))
+  expect_error(ipsum(2, c(1, 1.5)))
+  expect_error(ipsum(2, c(1, Inf)))
+  expect_error(ipsum(2, c(1, -1)))
+  expect_error(ipsum(2, c(1, NA)))
+})
