@@ -55,3 +55,32 @@ test_that("lorem::ispum() catches bad `sentences` input", {
   expect_error(ipsum(2, c(1, -1)))
   expect_error(ipsum(2, c(1, NA)))
 })
+
+test_that("lorem::ipsum() warns about bad punctuation valence", {
+  withr::with_options(
+    list(lorem.punctuation_valence = 100),
+    expect_warning(ipsum())
+  )
+})
+
+test_that("get_punctuation_valence()", {
+  withr::with_options(
+    list(lorem.punctuation_valence = 0.8),
+    expect_equal(get_punctuation_valence(), 0.8)
+  )
+
+  withr::with_options(
+    list(lorem.punctuation_valence = FALSE),
+    expect_false(get_punctuation_valence())
+  )
+
+  withr::with_options(
+    list(lorem.punctuation_valence = TRUE),
+    expect_equal(get_punctuation_valence(), 0.4)
+  )
+
+  withr::with_options(
+    list(lorem.punctuation_valence = 100),
+    expect_warning(expect_equal(get_punctuation_valence(warn = TRUE), 0.4))
+  )
+})
