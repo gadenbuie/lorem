@@ -71,15 +71,7 @@ ipsum <- function(paragraphs = 1, sentences = NULL, avg_words_per_sentence = 10)
 
   # break into sentences
   ret <- pv_char(break_sentences, text = text, n = sentences)
-  class(ret) <- c("lorem", class(ret))
-  ret
-}
-
-#' @importFrom knitr knit_print
-#' @export
-knit_print.lorem <- function(x, ...) {
-  x <- paste(x, collapse = "\n\n")
-  knitr::asis_output(x)
+  structure(as.list(ret), class = "lorem")
 }
 
 #' @describeIn ipsum Generate _lorem ipsum_ words, without punctuation.

@@ -5,5 +5,7 @@ template:
 
 reference:
 - title: Generate Placeholder Text
-  contents: '`ipsum`'
+  contents:
+  - ipsum
+  - as.tags.lorem
 

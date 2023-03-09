@@ -24,6 +24,7 @@ register_s3_method <- function(pkg, generic, class, fun = NULL) {
 
 .onLoad <- function(libname, pkgname, ...) {
   register_s3_method("knitr", "knit_print", "lorem")
+  register_s3_method("htmltools", "as.tags", "lorem")
 
   invisible()
 }
