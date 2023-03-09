@@ -93,7 +93,7 @@ jobs:
 
           # Report deployed site URL
           deployed_url <- file.path(pkg$meta$url, subdir)
-          cat(sprintf('url="%s"', deployed_url), file = Sys.getenv("GITHUB_OUTPUT"), append = TRUE)
+          cat(sprintf('url=%s', deployed_url), file = Sys.getenv("GITHUB_OUTPUT"), append = TRUE)
 
       - name: Notify pkgdown deployment
         if: github.event_name == 'pull_request'
@@ -104,8 +104,8 @@ jobs:
           number: ${{ github.event.number }}
           id: pkgdown-deploy
           append: false
-          message: |
-            Preview documentation for this PR (at commit ${{ github.sha }}):
+          message: >
+            Preview documentation for this PR (at commit ${{ github.event.pull_request.head.sha }}):
             ${{ steps.deploy.outputs.url }}.
 
   pkgdown-clean:
