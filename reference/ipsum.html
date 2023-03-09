@@ -151,62 +151,64 @@ will be inserted. The default value is 0.4.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># 1 paragraph of text</span></span></span>
 <span class="r-in"><span><span class="fu">lorem</span><span class="fu">::</span><span class="fu">ipsum</span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;lorem&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ipsum dui mi hac quisque malesuada velit netus justo habitasse.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ultrices vel id maecenas, imperdiet donec! Feugiat pharetra magnis:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> neque, lobortis enim senectus rutrum tempor metus tellus, urna luctus,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> viverra tortor.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sit pellentesque cum nam sem, nunc orci dis nascetur eros! Fusce cras</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> phasellus feugiat mollis! Turpis posuere, iaculis non curabitur litora</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> volutpat urna iaculis! Sociosqu cubilia sed, augue accumsan donec;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> inceptos dictum sollicitudin. Suspendisse scelerisque nec congue</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sollicitudin sed dictumst urna felis, sollicitudin morbi porta?</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># 2 paragraphs with 2 and 3 sentences each</span></span></span>
 <span class="r-in"><span><span class="fu">lorem</span><span class="fu">::</span><span class="fu">ipsum</span><span class="op">(</span><span class="fl">2</span>, sentences <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;lorem&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Elit accumsan nascetur fermentum nulla commodo habitasse elementum.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ultrices justo tincidunt taciti: aenean cursus ultricies quam felis</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> gravida himenaeos a.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Ipsum dapibus primis ante nascetur egestas metus pharetra duis netus</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> etiam conubia! Curabitur vivamus eget lobortis fusce – convallis sociis</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ultrices magnis nisl ad, leo auctor risus.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Amet penatibus vivamus, erat praesent curabitur. Quam purus ultricies</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> felis conubia arcu class mauris? Auctor posuere placerat turpis cursus</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> id lacus, primis tempus, etiam, penatibus vivamus gravida penatibus nam</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> quam porttitor sagittis morbi lacinia.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Consectetur pretium felis litora, mattis magnis mus, netus felis non,</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> imperdiet praesent integer semper eu. Dictumst sodales semper egestas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> pharetra curabitur ridiculus odio leo ullamcorper? Suspendisse nunc</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> rhoncus penatibus ante.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># 2 paragraphs with short sentences</span></span></span>
 <span class="r-in"><span><span class="fu">lorem</span><span class="fu">::</span><span class="fu">ipsum</span><span class="op">(</span><span class="fl">2</span>, avg_words_per_sentence <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;lorem&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Lorem in volutpat, curae dapibus hac. Fusce litora sagittis porttitor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> nulla sed. Proin penatibus quisque himenaeos faucibus mollis</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> condimentum? Na condimentum?</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Consectetur aptent mauris mollis? Fermentum mattis aliquet tellus.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Viverra eros curae nostra. Ante convallis montes auctor! Arcu pretium</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> interdum luctus eros! Na eros.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Elit mattis nibh dictumst accumsan! Tempus ultrices iaculis malesuada</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> commodo? Vestibulum est cum mattis sollicitudin. Litora lobortis</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> faucibus litora ac litora. Ornare cubilia hac lacus vehicula magna. Na</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> magna?</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Amet sed scelerisque nunc. Litora maecenas ac platea malesuada. Mi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> parturient: nostra pharetra luctus! Quam parturient mus pharetra</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> commodo. Tellus eleifend vestibulum malesuada magna. Parturient porta</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> tellus mus facilisi. Na facilisi?</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># 2 paragraphs with long sentences</span></span></span>
 <span class="r-in"><span><span class="fu">lorem</span><span class="fu">::</span><span class="fu">ipsum</span><span class="op">(</span><span class="fl">2</span>, avg_words_per_sentence <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;lorem&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Elit pretium tempus consequat eros maecenas suscipit sociosqu interdum</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> litora! Sociis diam nullam dis neque cras semper accumsan nisl feugiat</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> auctor ullamcorper. Placerat iaculis viverra accumsan parturient lacus?</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Magnis natoque rhoncus sed tortor pellentesque lacus diam, ultrices</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> vulputate nulla cras parturient. Inceptos volutpat sed eleifend taciti</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> viverra faucibus a tempus nec posuere congue nostra. Nisl neque feugiat</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> faucibus mi odio et pharetra luctus purus blandit tortor ullamcorper</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> dictumst condimentum nam urna aliquet orci nisi mattis pharetra enim</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> imperdiet etiam, convallis enim, per, parturient diam – mus porta, leo</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> lectus montes odio, nostra tempor, nostra at ante molestie tincidunt –</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> morbi ullamcorper netus semper pharetra ridiculus justo augue bibendum</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> odio ullamcorper praesent mollis netus torquent viverra gravida</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> faucibus lobortis curabitur.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sit quam nostra vivamus habitant lobortis arcu, felis scelerisque donec</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> metus nibh. Ad ridiculus nisi ornare tortor tempus mattis ullamcorper</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> dui: curae ullamcorper nunc curabitur. Penatibus posuere, et aliquet</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> quis habitant platea. Libero convallis quis aliquam? Auctor eros,</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sagittis fermentum placerat orci, lectus at a. Vel erat semper aliquet</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> arcu potenti ridiculus sapien fames! Mi euismod suscipit odio quam</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> elementum magna magna pellentesque diam tempus massa primis posuere</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> montes aenean penatibus curae lacus eros quam et erat senectus volutpat</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> fames est nullam sem orci nulla lacinia fermentum suscipit interdum</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> himenaeos accumsan suspendisse fames, netus rutrum eleifend, dui,</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blandit – dis hac vulputate, leo eu sodales, mi, nostra metus accumsan</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> ornare porta feugiat arcu integer laoreet, purus consequat, odio id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> molestie libero erat pulvinar habitant gravida netus integer potenti ut</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> et lacus fermentum montes taciti vulputate placerat vestibulum sem</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> porttitor non erat quis aliquam.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Ipsum eget phasellus, dapibus gravida cursus mollis? Vestibulum sodales</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> dictumst senectus sagittis – maecenas justo himenaeos. Hendrerit morbi</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> eleifend, a accumsan consequat. Iaculis dis porta purus sollicitudin</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ridiculus curae porta egestas nam aenean euismod phasellus tellus</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> venenatis orci litora, viverra, pellentesque, hendrerit sed massa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> tristique scelerisque, nisl, phasellus mus; at primis, primis, sapien</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> facilisi, pharetra, auctor tristique neque posuere, mattis gravida</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> lacus, vitae sed fermentum erat habitasse sagittis tellus viverra fusce</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> donec senectus molestie bibendum a sociosqu lectus fames tellus</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> posuere!</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dolor magna gravida neque odio lectus eu eu condimentum odio erat!</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Sociosqu natoque nisi nullam sed accumsan – torquent nam vitae tellus?</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fusce semper nisi nam blandit placerat nostra metus imperdiet potenti.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Aliquam auctor scelerisque mollis, nostra tempus dapibus nunc quam</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sollicitudin natoque mi urna nunc leo cum quis platea, felis ad nulla</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> eleifend eleifend, curae, interdum, in eget aliquam, torquent netus,</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> cras nulla suspendisse vitae, vestibulum convallis iaculis justo nisi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> cursus tempor varius netus urna: bibendum sociosqu sollicitudin lectus</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> blandit nunc ultricies ut.</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
