@@ -5,8 +5,8 @@ Authors@R:
     person("Garrick", "Aden-Buie", , "garrick@adenbuie.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7111-0077"))
 Description: Quickly generate lorem ipsum placeholder text. Easy to
-    integrate in RMarkdown documents. Includes an RStudio addin to insert
-    lorem ipsum into the current document.
+    integrate in 'R Markdown' documents and 'Shiny' apps. Includes an
+    'RStudio' addin to insert lorem ipsum into the current document.
 License: MIT + file LICENSE
 URL: https://github.com/gadenbuie/lorem,
     http://pkg.garrickadenbuie.com/lorem/
