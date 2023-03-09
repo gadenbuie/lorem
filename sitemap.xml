@@ -16,9 +16,18 @@
     <loc>http://pkg.garrickadenbuie.com/lorem/index.html</loc>
   </url>
   <url>
+    <loc>http://pkg.garrickadenbuie.com/lorem/news/index.html</loc>
+  </url>
+  <url>
+    <loc>http://pkg.garrickadenbuie.com/lorem/reference/as.tags.lorem.html</loc>
+  </url>
+  <url>
     <loc>http://pkg.garrickadenbuie.com/lorem/reference/index.html</loc>
   </url>
   <url>
     <loc>http://pkg.garrickadenbuie.com/lorem/reference/ipsum.html</loc>
+  </url>
+  <url>
+    <loc>http://pkg.garrickadenbuie.com/lorem/reference/lorem-package.html</loc>
   </url>
 </urlset>
