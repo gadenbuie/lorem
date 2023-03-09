@@ -97,7 +97,7 @@ jobs:
 
       - name: Notify pkgdown deployment
         if: github.event_name == 'pull_request'
-        uses: hasura/comment-progress@1d904b4
+        uses: hasura/comment-progress@v2.2.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
@@ -133,7 +133,7 @@ jobs:
           fi
 
       - name: Notify pkgdown cleanup
-        uses: hasura/comment-progress@1d904b4
+        uses: hasura/comment-progress@v2.2.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
