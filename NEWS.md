@@ -1,5 +1,8 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# lorem (development version)
+
+
 # lorem 1.0.0
 
 The first official release of **lorem** on CRAN! A few small changes have happened in the package since it was first released on GitHub:
