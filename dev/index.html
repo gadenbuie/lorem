@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Quickly generate lorem ipsum placeholder text. Easy to
-    integrate in RMarkdown documents. Includes an RStudio addin to insert
-    lorem ipsum into the current document.">
+    integrate in R Markdown documents and Shiny apps. Includes an
+    RStudio addin to insert lorem ipsum into the current document.">
 <title>Generate Lorem Ipsum Text • lorem</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Generate Lorem Ipsum Text">
 <meta property="og:description" content="Quickly generate lorem ipsum placeholder text. Easy to
-    integrate in RMarkdown documents. Includes an RStudio addin to insert
-    lorem ipsum into the current document.">
+    integrate in R Markdown documents and Shiny apps. Includes an
+    RStudio addin to insert lorem ipsum into the current document.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@grrrck">
 <meta name="twitter:site" content="@grrrck">
@@ -36,7 +36,7 @@
     
     <a class="navbar-brand me-2" href="index.html">lorem</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.1.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.0.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,9 +99,17 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
+<p>You can install the latest released version of lorem from CRAN</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.package("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gadenbuie/lorem"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"lorem"</span><span class="op">)</span></span></code></pre></div>
+<p>or the current development version of lorem from GitHub or r-universe</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># GitHub</span></span>
+<span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">rmeotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"gadenbuie/lorem"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># R Universe</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'lorem'</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'https://gadenbuie.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
@@ -115,25 +123,25 @@
 <h3 id="r-markdown">R Markdown<a class="anchor" aria-label="anchor" href="#r-markdown"></a>
 </h3>
 <p>Another way to generate <em>lorem ipsum</em> placeholder text is to call <code><a href="reference/ipsum.html">lorem::ipsum()</a></code> in an inline R chunk in R Markdown.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(paragraphs = 2)`</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(paragraphs = 2)`</span></span></code></pre></div>
 <blockquote>
 <p>Sit nunc at convallis fringilla semper. Penatibus vivamus eget malesuada cursus fames magnis potenti. Venenatis ligula enim conubia laoreet orci, class ligula. Massa sem sed enim risus ut mattis inceptos nisl elementum mattis. Nostra ultricies habitant donec vitae luctus proin gravida placerat ac libero imperdiet! Auctor habitasse faucibus ultricies purus eget sociis ultrices habitasse: nec ad aptent lectus rutrum proin potenti, montes, sodales, posuere convallis tempor erat, egestas magna lectus sociis mollis purus.</p>
 <p>Dolor turpis euismod himenaeos interdum felis dictum tempus euismod tortor aliquam! Eget interdum vehicula laoreet quam mollis, justo cursus ad blandit feugiat pulvinar? Sem sodales bibendum leo leo magna pulvinar metus lacinia nam. Fringilla maecenas duis dis suscipit aenean natoque sem metus, quam risus sagittis convallis primis sociis id dictumst.</p>
 </blockquote>
 <p>You can control the number of <code>paragraphs</code> and <code>sentences</code> per paragraph.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))`</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(paragraphs = 3, sentences = c(1, 2, 3))`</span></span></code></pre></div>
 <blockquote>
 <p>Amet cras primis at ac neque primis dui scelerisque massa inceptos massa.</p>
 <p>Adipiscing netus cursus – vivamus est aliquam mauris pharetra: nostra ornare. Tristique ad consequat sagittis montes sociis, ut cursus tincidunt vitae sagittis netus!</p>
 <p>Adipiscing aptent libero vitae etiam tristique commodo iaculis erat mattis tempor convallis. Porta aenean natoque, feugiat himenaeos – ac accumsan mollis torquent in ut maecenas congue vulputate nulla! Interdum fames.</p>
 </blockquote>
 <p>You can also adjust the <code>avg_words_per_sentence</code> to create long or short paragraphs.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(2, avg_words_per_sentence = 3)`</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(2, avg_words_per_sentence = 3)`</span></span></code></pre></div>
 <blockquote>
 <p>Elit facilisis curae pharetra quisque per? Euismod risus phasellus euismod velit, orci platea? Na platea.</p>
 <p>Amet posuere habitasse imperdiet. Porta tempor felis morbi. Est nam nisl litora viverra? Accumsan feugiat volutpat cubilia purus. Na purus.</p>
 </blockquote>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(1, avg_words_per_sentence = 20)`</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">`r lorem::ipsum(1, avg_words_per_sentence = 20)`</span></span></code></pre></div>
 <blockquote>
 <p>Elit venenatis tincidunt urna sagittis integer posuere dignissim. Dui tellus massa nam suspendisse venenatis dui nec imperdiet donec magna libero elementum euismod nibh ligula conubia vitae, ad egestas dis himenaeos ligula urna, dui parturient lacus montes semper ultricies euismod non condimentum porta sem luctus porttitor platea hac sagittis!</p>
 </blockquote>
@@ -142,7 +150,7 @@
 <h3 id="everywhere-else">Everywhere Else<a class="anchor" aria-label="anchor" href="#everywhere-else"></a>
 </h3>
 <p>Generate <em>lorem ipsum</em> anywhere else using <code><a href="reference/ipsum.html">lorem::ipsum()</a></code> or <code><a href="reference/ipsum.html">lorem::ipsum_words()</a></code>.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ipsum_items</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">replicate</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fu">lorem</span><span class="fu">::</span><span class="fu"><a href="reference/ipsum.html">ipsum_words</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"-"</span>, <span class="va">ipsum_items</span><span class="op">)</span>, sep <span class="op">=</span> <span class="st">"\n"</span><span class="op">)</span></span></code></pre></div>
 <ul>
@@ -163,6 +171,7 @@
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
+<li><a href="https://cloud.r-project.org/package=lorem" class="external-link">View on CRAN</a></li>
 <li><a href="https://github.com/gadenbuie/lorem/" class="external-link">Browse source code</a></li>
 <li><a href="https://github.com/gadenbuie/lorem/issues" class="external-link">Report a bug</a></li>
 </ul>
