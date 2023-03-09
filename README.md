@@ -9,7 +9,7 @@
 status](https://www.r-pkg.org/badges/version/lorem)](https://CRAN.R-project.org/package=lorem)
 [![lorem r-universe
 badge](https://gadenbuie.r-universe.dev/badges/lorem)](https://gadenbuie.r-universe.dev/lorem)
-[![R-CMD-check](https://github.com/gadenbuie/lorem/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gadenbuie/lorem/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/gadenbuie/lorem/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/gadenbuie/lorem/actions/workflows/check-standard.yaml)
 <!-- badges: end -->
 
 - Quickly generate lorem ipsum placeholder text with `lorem::ipsum()`.
