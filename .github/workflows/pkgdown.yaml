@@ -82,10 +82,31 @@ jobs:
           echo "subdir=${{ github.event.inputs.tag }}" >> $GITHUB_ENV
 
       - name: Deploy pkgdown site
+        id: deploy
         shell: Rscript {0}
         run: |
           subdir <- "${{ env.subdir }}"
-          pkgdown::deploy_to_branch(subdir = if (nzchar(subdir)) subdir, clean = nzchar(subdir))
+          pkg <- pkgdown::as_pkgdown(".")
+
+          # Deploy pkgdown site to branch
+          pkgdown::deploy_to_branch(pkg, subdir = if (nzchar(subdir)) subdir, clean = nzchar(subdir))
+
+          # Report deployed site URL
+          deployed_url <- file.path(pkg$meta$url, subdir)
+          cat(sprintf('url="%s"', deployed_url), Sys.getenv("GITHUB_OUTPUT"), append = TRUE)
+
+      - name: Notify pkgdown deployment
+        if: github.event_name == 'pull_request'
+        uses: hasura/comment-progress@1d904b4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: pkgdown-deploy
+          append: false
+          message: |
+            Preview documentation for this PR (at commit ${{ github.sha }}):
+            ${{ steps.deploy.outputs.url }}.
 
   pkgdown-clean:
     if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' }}
@@ -110,3 +131,14 @@ jobs:
           else
             echo 'No preview to remove'
           fi
+
+      - name: Notify pkgdown cleanup
+        uses: hasura/comment-progress@1d904b4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: pkgdown-deploy
+          recreate: true
+          message: |
+            Preview documentation for this PR has been cleaned up.
