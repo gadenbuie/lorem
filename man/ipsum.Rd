@@ -36,8 +36,9 @@ element in the vector is a paragraph of text.
 Generates \emph{lorem ipsum} placeholder text for the requested number of
 sentences or paragraphs. You can control the number of sentences per
 paragraph and the average number of words per sentence, or simply enter the
-number of desired paragraphs for a completely random experience. Note that
-\code{lorem::ipsum()} uses the random number generator and sampling and makes no
+number of desired paragraphs for a completely random experience.
+
+\code{lorem::ipsum()} uses sampling and the random number generator and makes no
 effort to shield the placeholder text generation from the main script, so
 please only use this package for temporary placeholder text.
 }

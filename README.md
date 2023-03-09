@@ -21,9 +21,21 @@ badge](https://gadenbuie.r-universe.dev/badges/lorem)](https://gadenbuie.r-unive
 
 ## Installation
 
+You can install the latest released version of lorem from CRAN
+
 ``` r
-# install.package("devtools")
-devtools::install_github("gadenbuie/lorem")
+install.packages("lorem")
+```
+
+or the current development version of lorem from GitHub or r-universe
+
+``` r
+# GitHub
+# install.packages("remotes")
+rmeotes::install_github("gadenbuie/lorem")
+
+# R Universe
+install.packages('lorem', repos = c('https://gadenbuie.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 ## Usage
