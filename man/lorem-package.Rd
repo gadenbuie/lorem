@@ -6,7 +6,7 @@
 \alias{lorem-package}
 \title{lorem: Generate Lorem Ipsum Text}
 \description{
-Quickly generate lorem ipsum placeholder text. Easy to integrate in RMarkdown documents. Includes an RStudio addin to insert lorem ipsum into the current document.
+Quickly generate lorem ipsum placeholder text. Easy to integrate in 'R Markdown' documents and 'Shiny' apps. Includes an 'RStudio' addin to insert lorem ipsum into the current document.
 }
 \seealso{
 Useful links:
