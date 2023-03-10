@@ -140,6 +140,5 @@ jobs:
           repository: ${{ github.repository }}
           number: ${{ github.event.number }}
           id: pkgdown-deploy
-          recreate: true
           message: |
-            :closed_book: Preview documentation for this PR has been cleaned up.
+            :closed_book: _Preview documentation for this PR has been cleaned up._
